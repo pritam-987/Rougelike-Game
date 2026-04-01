@@ -143,9 +143,7 @@ cd rouge
 
 Run the game:
 
-```
-python main.py
-```
+Dowonload the main.exe file from release page and run the file.
 
 From the main menu:
 
