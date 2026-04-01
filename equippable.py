@@ -25,7 +25,7 @@ class Euippable(BaseComponent):
 
 class Dagger(Euippable):
     def __init__(self) -> None:
-        super().__init__(equipment_type=Euippable.WEAPON, power_bonus=2)
+        super().__init__(equipment_type=EquipmentType.WEAPON, power_bonus=2)
 
 
 class Sword(Euippable):

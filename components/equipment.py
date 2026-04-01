@@ -37,6 +37,8 @@ class Equipment(BaseComponent):
         if self.armor is not None and self.armor.equippable is not None:
             bonus += self.armor.equippable.power_bonus
 
+        return bonus
+
     def item_is_equipped(self, item: Item) -> bool:
         return self.weapon == item or self.armor == item
 
@@ -66,7 +68,7 @@ class Equipment(BaseComponent):
     def toggle_equip(self, equippable_item: Item, add_message: bool = True) -> None:
         if (
             equippable_item.equippable
-            and equippable_item.equippable.equipment_types == EquipmentType.WEAPON
+            and equippable_item.equippable.equipment_type == EquipmentType.WEAPON
         ):
             slot = "weapon"
         else:

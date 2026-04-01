@@ -1,4 +1,5 @@
-from components import consumable, equippable
+from components import consumable, equipment
+import equippable
 from components.ai import HostileEnemy
 from components.equipment import Equipment
 from components.fighter import Fighter
@@ -25,7 +26,7 @@ orc = Actor(
     equipment=Equipment(),
     fighter=Fighter(hp=10, base_defense=0, base_power=3),
     inventory=Inventory(capacity=0),
-    level=Level(level_up_base=35),
+    level=Level(level_up_base=35, xp_given=25),
 )
 troll = Actor(
     char="T",
@@ -35,7 +36,7 @@ troll = Actor(
     equipment=Equipment(),
     fighter=Fighter(hp=16, base_defense=1, base_power=4),
     inventory=Inventory(capacity=0),
-    level=Level(level_up_base=100),
+    level=Level(level_up_base=100, xp_given=50),
 )
 
 health_potion = Item(
@@ -69,11 +70,18 @@ dagger = Item(
     char="/", color=(0, 191, 255), name="Dagger", equippable=equippable.Dagger()
 )
 
-sword = Item(
+leather_armor = Item(
     char="[",
     color=(139, 69, 19),
     name="Leather Armor",
     equippable=equippable.LeatherArmor(),
+)
+
+sword = Item(
+    char="/",
+    color=(0, 191, 255),
+    name="Sword",
+    equippable=equippable.Sword(),
 )
 
 chain_mail = Item(

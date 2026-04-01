@@ -13,8 +13,9 @@ import entity_factories
 import event_handlers
 from engine import Engine
 from game_map import GameWorld
+from utils import resource_path
 
-bg_img = tcod.image.load("menu_background(1).png")[:, :, :3]
+bg_img = tcod.image.load(resource_path("menu_background(1).png"))[:, :, :3]
 
 
 def new_game() -> Engine:

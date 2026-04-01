@@ -247,7 +247,7 @@ class LevelUpEveventHandler(AskUserEventHandler):
             x=x,
             y=0,
             width=35,
-            heght=8,
+            height=8,
             title=self.TITLE,
             clear=True,
             fg=(255, 255, 255),
@@ -362,7 +362,7 @@ class InventoryActiveHandler(InventoryEventHandler):
     TITLE = "Select an item to use"
 
     def on_item_selected(self, item: Item) -> Optional[ActionOrHandler]:
-        if item.console:
+        if item.consumable:
             return item.consumable.get_action(self.engine.player)
         elif item.equippable:
             return action.EquipAction(self.engine.player, item)
@@ -475,8 +475,8 @@ class PopupMessage(BaseEventHandler):
 
     def on_render(self, console: tcod.Console) -> None:
         self.parent.on_render(console)
-        self.tiles_rgb["fg"] //= 8
-        self.tiles_rgb["bg"] //= 8
+        console.tiles_rgb["fg"] //= 8
+        console.tiles_rgb["bg"] //= 8
 
         console.print(
             console.width // 2,

@@ -151,8 +151,11 @@ class PickupAction(Action):
 
 
 class DropItem(ItemAction):
+    def __init__(self, entity: Actor, item: Item):
+        super().__init__(entity, item)
+
     def perform(self) -> None:
-        if self.engine.equipment.item_is_equipped(self.item):
+        if self.entity.equipment.item_is_equipped(self.item):
             self.entity.equipment.toggle_equip(self.item)
 
         self.entity.inventory.drop(self.item)
@@ -160,9 +163,7 @@ class DropItem(ItemAction):
 
 class EquipAction(ItemAction):
     def __init__(self, entity: Actor, item: Item):
-        super().__init__(entity)
-
-        self.item = item
+        super().__init__(entity, item)
 
     def perform(self) -> None:
         self.entity.equipment.toggle_equip(self.item)

@@ -55,7 +55,7 @@ def get_entities_at_random(
     floor: int,
 ) -> List[Entity]:
     chances = {}
-    for key, values in chances.items():
+    for key, values in chances_by_floor.items():
         if key > floor:
             break
         else:
@@ -63,7 +63,7 @@ def get_entities_at_random(
                 entity = value[0]
                 chance = value[1]
                 chances[entity] = chance
-    entities = list(chances.key())
+    entities = list(chances.keys())
     chance_values = list(chances.values())
 
     chosen_entities = random.choices(entities, weights=chance_values, k=num_of_entities)
