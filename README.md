@@ -1,49 +1,12 @@
-# 🗡️ Rouge
 
-```
-██████╗  ██████╗ ██╗   ██╗ ██████╗ ███████╗
-██╔══██╗██╔═══██╗██║   ██║██╔════╝ ██╔════╝
-██████╔╝██║   ██║██║   ██║██║  ███╗█████╗  
-██╔══██╗██║   ██║██║   ██║██║   ██║██╔══╝  
-██║  ██║╚██████╔╝╚██████╔╝╚██████╔╝███████╗
-╚═╝  ╚═╝ ╚═════╝  ╚═════╝  ╚═════╝ ╚══════╝
-```
+# Introduction
 
-# 📜 Introduction
-
-## What is Rouge?
-
-**Rouge** is a classic **roguelike dungeon crawler** built with **Python** using the **tcod library**.
-The game features procedural dungeon generation, turn-based combat, enemies, equipment, leveling mechanics, and a traditional ASCII interface inspired by classic roguelikes like **Rogue**, **NetHack**, and **Dungeon Crawl Stone Soup**.
+## What is this?
+This is a clone of the original Rogue game which I have made in tcod and python.
 
 ## Game Summary
+You can play as "@" the player, explore dungeon, level up and have fun.
 
-Explore procedurally generated dungeon floors filled with monsters and items.
-Fight enemies, collect equipment, level up your character, and descend deeper into the dungeon.
-
-The game follows traditional roguelike mechanics:
-
-* Turn-based gameplay
-* ASCII graphics
-* Tactical combat
-* Procedurally generated dungeons
-* Resource management
-
-## Screenshot
-
-*(Add a screenshot here)*
-
-Example gameplay style:
-
-```
-####################
-#........o.........#
-#......@...........#
-#..............T...#
-#..........!.......#
-#..............>...#
-####################
-```
 
 * `@` Player
 * `o` Orc
@@ -53,74 +16,37 @@ Example gameplay style:
 
 ---
 
-# ✨ Features
-
-* Procedural dungeon generation with **rooms and corridors**
-* **Turn-based gameplay**
-* Multiple enemy types:
-
-  * Orc
-  * Troll
-* **Item system**
-
-  * Consumables
-  * Equipment
-* **Equipment system**
-
-  * Weapons
-  * Armor
-* **Level up system**
-
-  * Increase HP
-  * Increase Attack
-  * Increase Defense
-* **Multiple dungeon floors**
-* **Message log** system for game feedback
-* **Field of View (FOV)** system
-* Classic **ASCII roguelike interface**
-
----
-
-# 🎮 Controls
+# Controls
 
 ## Movement
 
-| Key           | Action                         |
-| ------------- | ------------------------------ |
+
 | Arrow Keys    | Move in 4 directions           |
 | Numpad 1-9    | Move including diagonals       |
 | h, j, k, l    | Vi keys: Left, Down, Up, Right |
 | y, u, b, n    | Vi diagonal movement           |
 | . or Numpad 5 | Wait (skip turn)               |
 
----
 
 ## Items
-
-| Key | Action                     |
-| --- | -------------------------- |
 | G   | Pick up item at location   |
 | I   | Open inventory (use item)  |
 | D   | Open inventory (drop item) |
 
----
 
 ## Other
-
-| Key           | Action               |
-| ------------- | -------------------- |
 | V             | View message history |
 | > (Shift + .) | Descend stairs       |
 | Esc           | Quit game            |
 
 ---
 
-# ⚙️ Installation
+# Installation
 
 ## Requirements
 
-* **Python 3.8+**
-* **tcod library**
+ Python 3.8+
+ tcod library
 
 Install dependencies:
 
@@ -137,7 +63,7 @@ cd rouge
 
 ---
 
-# ▶️ How to Play
+# How to Play
 
 ## Getting Started
 
@@ -147,20 +73,9 @@ Dowonload the main.exe file from release page and run the file.
 
 From the main menu:
 
-* Press **N** to start a new game
+* Press "N" to start a new game
 
----
 
-## Gameplay Loop
-
-1. Move around the dungeon
-2. Fight enemies by bumping into them
-3. Pick up items using **G**
-4. Use potions and scrolls with **I**
-5. Equip weapons and armor
-6. Kill enemies to gain XP
-7. Level up to increase stats
-8. Find stairs **(>)** to go deeper
 
 ---
 
@@ -168,37 +83,18 @@ From the main menu:
 
 Combat is automatic when you move into an enemy.
 
-```
-Player Attack = base_power + equipment bonuses
-Damage = attack - enemy defense
-```
-
 Enemies attack you during their turn.
 
-Use **scrolls and potions** strategically to survive.
+Use scrolls and potions strategically to survive.
 
 ---
 
 ## Leveling Up
 
-Killing enemies grants **XP**.
-
-XP required:
-
-```
-XP Needed = level × 150 + level_up_base
-```
-
-Where:
-
-```
-level_up_base = 200
-```
+Killing enemies grants XP.
 
 When leveling up, choose one:
 
-| Option       | Effect     |
-| ------------ | ---------- |
 | Constitution | +20 HP     |
 | Strength     | +1 Attack  |
 | Agility      | +1 Defense |
@@ -240,12 +136,9 @@ rouge/
 
 ---
 
-# 🧠 Game Mechanics
+# Mechanics
 
 ## Entities
-
-| Entity | Symbol | HP | Power | Defense | XP |
-| ------ | ------ | -- | ----- | ------- | -- |
 | Player | @      | 30 | 5     | 2       | —  |
 | Orc    | o      | 10 | 3     | 0       | 25 |
 | Troll  | T      | 16 | 4     | 1       | 50 |
@@ -253,9 +146,6 @@ rouge/
 ---
 
 ## Items
-
-| Item             | Symbol | Effect                      |
-| ---------------- | ------ | --------------------------- |
 | Health Potion    | !      | Heal 4 HP                   |
 | Lightning Scroll | ~      | 20 damage to nearest enemy  |
 | Confusion Scroll | ~      | Confuses enemy for 10 turns |
@@ -272,48 +162,4 @@ rouge/
 ```
 >
 ```
-
-* Located in the **last generated room**
-* Press **Shift + .** to descend
-* Generates a **new dungeon floor**
-* Enemies and items respawn
-
----
-
-# ⚙️ Configuration
-
-Game parameters:
-
-| Setting               | Value   |
-| --------------------- | ------- |
-| Map Size              | 80 × 43 |
-| Max Rooms             | 30      |
-| Room Size             | 6 – 10  |
-| Max Monsters per Room | 2       |
-| Max Items per Room    | 2       |
-
----
-
-# 📜 License
-
-This project is licensed under the **MIT License**.
-
-You are free to:
-
-* Use
-* Modify
-* Distribute
-
----
-
-# 🙏 Acknowledgements
-
-This project is inspired by the official **tcod roguelike tutorial** and classic roguelike games.
-
-* Rogue
-* NetHack
-* Dungeon Crawl Stone Soup
-
----
-
-⭐ If you like this project, consider giving it a star!
+Press Shift + . to acess the stairs.
