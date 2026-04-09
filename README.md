@@ -21,6 +21,7 @@ You can play as "@" the player, explore dungeon, level up and have fun.
 ## Movement
 
 
+--------------------------------------------------
 | Arrow Keys    | Move in 4 directions           |
 | Numpad 1-9    | Move including diagonals       |
 | h, j, k, l    | Vi keys: Left, Down, Up, Right |
@@ -29,12 +30,16 @@ You can play as "@" the player, explore dungeon, level up and have fun.
 
 
 ## Items
+
+-----------------------------------
 | G   | Pick up item at location   |
 | I   | Open inventory (use item)  |
 | D   | Open inventory (drop item) |
 
 
 ## Other
+
+---------------------------------------
 | V             | View message history |
 | > (Shift + .) | Descend stairs       |
 | Esc           | Quit game            |
@@ -95,6 +100,7 @@ Killing enemies grants XP.
 
 When leveling up, choose one:
 
+----------------------------
 | Constitution | +20 HP     |
 | Strength     | +1 Attack  |
 | Agility      | +1 Defense |
@@ -139,6 +145,8 @@ rouge/
 # Mechanics
 
 ## Entities
+
+----------------------------------------------
 | Player | @      | 30 | 5     | 2       | —  |
 | Orc    | o      | 10 | 3     | 0       | 25 |
 | Troll  | T      | 16 | 4     | 1       | 50 |
@@ -146,6 +154,8 @@ rouge/
 ---
 
 ## Items
+
+-----------------------------------------------------------
 | Health Potion    | !      | Heal 4 HP                   |
 | Lightning Scroll | ~      | 20 damage to nearest enemy  |
 | Confusion Scroll | ~      | Confuses enemy for 10 turns |
@@ -163,3 +173,19 @@ rouge/
 >
 ```
 Press Shift + . to acess the stairs.
+
+##Declaration 
+AI was used to write some parts of the readme.
+
+
+
+
+
+
+
+
+
+
+
+
+
