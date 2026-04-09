@@ -107,33 +107,6 @@ rouge/
 │   └── base_components.py
 ```
 
----
-
-# Mechanics
-
-## Entities
-
-----------------------------------------------
-| Player | @      | 30 | 5     | 2       | —  |
-| Orc    | o      | 10 | 3     | 0       | 25 |
-| Troll  | T      | 16 | 4     | 1       | 50 |
-
----
-
-## Items
-
------------------------------------------------------------
-| Health Potion    | !      | Heal 4 HP                   |
-| Lightning Scroll | ~      | 20 damage to nearest enemy  |
-| Confusion Scroll | ~      | Confuses enemy for 10 turns |
-| Fireball Scroll  | ~      | 12 damage in 3-tile radius  |
-| Dagger           | /      | +2 power                    |
-| Sword            | /      | +4 power                    |
-| Leather Armor    | [      | +1 defense                  |
-| Chain Mail       | [      | +3 defense                  |
-
----
-
 ## Stairs
 
 ```
