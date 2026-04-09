@@ -1,8 +1,5 @@
 
 
-##Declaration 
-AI was used to write some parts of the readme.
-
 # Introduction
 
 ## What is this?
