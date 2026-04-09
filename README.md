@@ -70,15 +70,7 @@ Use scrolls and potions strategically to survive.
 
 ## Leveling Up
 
-Killing enemies grants XP.
-
-When leveling up, choose one:
-
-----------------------------
-
-*| Constitution | +20 HP     |
-*| Strength     | +1 Attack  |
-*| Agility      | +1 Defense |
+Killing enemies grants XP and XP unlocks new levels. You can select powerups after leveling up.
 
 ---
 
