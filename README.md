@@ -20,36 +20,6 @@ You can play as "@" the player, explore dungeon, level up and have fun.
 
 ---
 
-# Controls
-
-## Movement
-
-
---------------------------------------------------
-| Arrow Keys    | Move in 4 directions           |
-| Numpad 1-9    | Move including diagonals       |
-| h, j, k, l    | Vi keys: Left, Down, Up, Right |
-| y, u, b, n    | Vi diagonal movement           |
-| . or Numpad 5 | Wait (skip turn)               |
-
-
-## Items
-
------------------------------------
-| G   | Pick up item at location   |
-| I   | Open inventory (use item)  |
-| D   | Open inventory (drop item) |
-
-
-## Other
-
----------------------------------------
-| V             | View message history |
-| > (Shift + .) | Descend stairs       |
-| Esc           | Quit game            |
-
----
-
 # Installation
 
 ## Requirements
@@ -105,9 +75,10 @@ Killing enemies grants XP.
 When leveling up, choose one:
 
 ----------------------------
-| Constitution | +20 HP     |
-| Strength     | +1 Attack  |
-| Agility      | +1 Defense |
+
+*| Constitution | +20 HP     |
+*| Strength     | +1 Attack  |
+*| Agility      | +1 Defense |
 
 ---
 
