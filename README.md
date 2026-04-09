@@ -1,4 +1,8 @@
 
+
+##Declaration 
+AI was used to write some parts of the readme.
+
 # Introduction
 
 ## What is this?
@@ -172,10 +176,7 @@ rouge/
 ```
 >
 ```
-Press Shift + . to acess the stairs.
-
-##Declaration 
-AI was used to write some parts of the readme.
+Press Shift + . to acess the stairs.gg
 
 
 
