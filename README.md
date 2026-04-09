@@ -62,7 +62,7 @@ pip install tcod
 Clone the repository:
 
 ```
-git clone https://github.com/yourusername/rouge.git
+git clone https://github.com/pritam-987/rouge.git
 cd rouge
 ```
 
