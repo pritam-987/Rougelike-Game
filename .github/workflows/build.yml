@@ -1,0 +1,33 @@
+name: Build Rouge
+
+on: [push]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install tcod pyinstaller
+
+      - name: Build executable
+        run: |
+          pyinstaller --onefile --noconsole main.py
+
+      - name: Upload build
+        uses: actions/upload-artifact@v4
+        with:
+          name: rouge-${{ matrix.os }}
+          path: dist/*

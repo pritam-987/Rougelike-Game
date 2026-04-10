@@ -1,19 +1,18 @@
-
-
 # Introduction
 
 ## What is this?
+
 This is a clone of the original Rogue game which I have made in tcod and python.
 
 ## Game Summary
+
 You can play as "@" the player, explore dungeon, level up and have fun.
 
-
-* `@` Player
-* `o` Orc
-* `T` Troll
-* `!` Potion
-* `>` Stairs
+- `@` Player
+- `o` Orc
+- `T` Troll
+- `!` Potion
+- `>` Stairs
 
 ---
 
@@ -21,8 +20,8 @@ You can play as "@" the player, explore dungeon, level up and have fun.
 
 ## Requirements
 
- Python 3.8+
- tcod library
+Python 3.8+
+tcod library
 
 Install dependencies:
 
@@ -49,9 +48,7 @@ Dowonload the main.exe file from release page and run the file.
 
 From the main menu:
 
-* Press "N" to start a new game
-
-
+- Press "N" to start a new game
 
 ---
 
@@ -109,17 +106,5 @@ rouge/
 ```
 >
 ```
-Press Shift + . to acess the stairs.gg
 
-
-
-
-
-
-
-
-
-
-
-
-
+Press Shift + . to acess the stairs.
