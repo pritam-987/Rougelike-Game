@@ -32,3 +32,6 @@ jobs:
         with:
           name: build-${{ matrix.os }}
           path: dist/
+        with:
+          name: build-${{ matrix.os }}
+          path: dist/
