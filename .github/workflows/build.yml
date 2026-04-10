@@ -1,14 +1,14 @@
-name: Build Rouge
+name: Build Game
 
 on: [push]
 
 jobs:
   build:
+    runs-on: ${{ matrix.os }}
+
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
-
-    runs-on: ${{ matrix.os }}
+        os: [windows-latest, ubuntu-latest, macos-latest]
 
     steps:
       - uses: actions/checkout@v4
@@ -20,14 +20,15 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install tcod pyinstaller
+          pip install -r requirements.txt
+          pip install pyinstaller
 
       - name: Build executable
         run: |
-          pyinstaller --onefile --noconsole main.py
+          pyinstaller --onefile main.py
 
       - name: Upload build
         uses: actions/upload-artifact@v4
         with:
-          name: rouge-${{ matrix.os }}
-          path: dist/*
+          name: build-${{ matrix.os }}
+          path: dist/
